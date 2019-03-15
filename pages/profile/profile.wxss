@@ -1,0 +1,166 @@
+/* pages/profile/profile.wxss */
+.container{
+  padding: 0 0;
+  background: #EDEDED;
+  display: flex;
+  flex-direction: column;
+  flex: 1
+}
+.usr_container{
+  width: 100%;
+  height: 200rpx;
+  background: #3385ff;
+  display: flex;
+  align-items: center;
+}
+
+.login{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.login .img{
+  width:90rpx;
+  height: 90rpx;
+  margin-left: 50rpx;
+  margin-right: 30rpx;
+}
+
+.login .img-phone{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.login .usr-title{
+  display: flex;
+  flex-direction: column;
+}
+
+.login .usr_name{
+  color: white;
+  font-size: 12pt;
+
+}
+
+.login .usr-img-phone{
+  margin-top: 5rpx;
+  display: flex;
+  align-items: center;
+}
+
+.login .usr_phone{
+  color: white;
+  font-size: 8pt;
+}
+
+.navagator{
+ width: 100%;
+  height: 200rpx;
+  background: #3385ff;
+  display: flex;
+  align-items: center;
+}
+
+.navagator-active{
+  background: #5a9be8;
+}
+
+.unLogin{
+  display: flex;
+  flex: 1;
+}
+
+.login-tips{
+  display: flex;
+  flex-direction: column;
+  padding-left: 70rpx;
+}
+
+.login-tips .txt-login{
+  color: white;
+  font-size: 12pt;
+}
+
+.login-tips .txt-more{
+  margin-top: 5rpx;
+  color: white;
+  font-size: 7pt;
+}
+
+.img-arrow{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+
+}
+
+.my-content{
+  display: flex;
+  margin-right: -1rpx;
+  flex-direction: row
+}
+
+.my-money{
+  width: 33.3%;
+  height: 130rpx;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1rpx solid #EDEDED;  
+  border-bottom: 1rpx solid lightgray;
+}
+
+.my-content-txt{
+  color: gray;
+  font-size: 8pt;
+  margin-bottom: 5rpx;
+  margin-top: 12rpx;
+}
+
+.my-content-img{
+  width: 48rpx;
+  height: 48rpx;
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+}
+
+.num{
+  margin-top: 15rpx;
+}
+.num .txt-num{
+  color: orange;
+  font-size: 16pt;
+  font-style: bold;
+}
+.num .txt-unit{
+  color: orange;
+  font-style: bold;
+  font-family: "黑体";
+  font-size: 8pt;
+}
+.more-list{
+  padding-top: 20rpx;
+}
+.weui-cell{
+  padding: 8px 15px;
+}
+.weui-cell__bd{
+  font-size: 9pt;
+  padding-top: 5rpx;
+  margin-left: 15rpx;
+}
+
+.logout{
+  margin-top: 100rpx;
+  height: 65rpx;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+}
+.logout .txt-logout{
+  color: red;
+  font-size: 8pt;
+}

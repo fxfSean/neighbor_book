@@ -1,0 +1,9 @@
+<view class='container'>
+  <view class='content'>
+    <image class='img' src='../../images/order.png'></image>
+    <text class='txt'>登陆后查看订单</text>
+    <view class='btn'>
+      <text class='login'>立即登录</text>
+    </view>
+  </view>
+</view>

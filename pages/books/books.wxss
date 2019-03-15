@@ -1,0 +1,56 @@
+.container{
+  padding: 0 0;
+}
+
+.weui-search-bar__form{
+  height: 28px;
+}
+
+.main-core {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  background: #fff;
+  min-height: 150rpx;
+  padding: 20rpx 20rpx;
+  overflow: hidden;
+}
+
+.main-core-item {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20rpx 20rpx;
+  width: 50%;
+}
+
+.book-item{
+  display: flex;
+  flex: 1;
+  background: #efeff4;  
+  flex-flow: row wrap;
+  align-items: center;
+  height: 120rpx;
+}
+
+.core-item-name {
+  display: block;
+  flex: 1;
+  text-align: right;
+  margin-right: 40rpx;
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  font-weight: 500;
+  font-family: "黑体";
+  }
+
+.board-name {
+  flex: 1;
+}
+
+.board-img {
+  width: 70rpx;
+  height: 80rpx;
+  margin-left: 40rpx;
+}
+

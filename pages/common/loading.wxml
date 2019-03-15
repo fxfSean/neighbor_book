@@ -1,0 +1,6 @@
+<template name="loading">
+    <view class='load-bg'>
+      <image class='img' src='../../../images/loading.gif'></image>
+      <text class='txt-loading'>加载中...</text>
+    </view>
+</template>

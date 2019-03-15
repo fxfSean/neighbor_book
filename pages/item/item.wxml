@@ -1,0 +1,16 @@
+<loading hidden="{{!loading}}">
+  加载中...
+</loading>
+<scroll-view scroll-y="true" wx:if="{{detail}}">
+  <view class="meta">
+    <image class="poster" src="{{detail.thumb}}" background-size="cover"/>
+    <text class="title">{{detail.name}}</text>
+    <text class="info">{{detail.author}}</text>    
+    <text class="info">金额：¥ {{detail.price}}</text>
+    <text class="info" hidden='true'>类型：{{movie.data.path == 60 ? '实践活动' : (movie.data.path == 61 ? '素质培训':'多彩赛事')}} </text>
+  </view>
+  <view class="summary">
+    <text class="label">概述：</text>
+    <text class="content">{{detail.descriptions}}</text>
+  </view>
+</scroll-view>

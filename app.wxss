@@ -1,0 +1,213 @@
+@import 'style/weui.wxss';
+
+page {
+  font-family: -apple-system-font, 'Helvetica Neue', Helvetica, 'Microsoft YaHei', sans-serif;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-body {
+  display: flex;
+  flex: 1;  
+    /* 打开后列表部分滑动  */
+  flex-direction: column;
+}
+
+.tips {
+  font-size: 28rpx;
+  text-align: center;
+  padding: 40rpx;
+  color: #ccc;
+}
+
+.tips .bottom{
+  display: flex;
+  width: 100%;
+  padding-top: 35rpx;
+  padding-bottom: 35rpx;
+  align-items: center;
+  justify-content: center;
+}
+.tips .bottom .line{
+  height: 0.2rpx;
+  background-color: gainsboro;
+  margin: 20rpx;
+  flex: 1
+}
+
+
+.container {
+  height: 100%;
+  flex-direction: column;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.temp1-bg{
+  background: white;
+  height: 300rpx;
+}
+.temp2-bg{
+  background: white;
+  height: 415px;
+  margin: 20rpx 0;
+  overflow: hidden;
+}
+.temp2-bg .title{
+  font-size: 11pt;
+  margin: 10rpx;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.temp1-bg .title{
+  font-size: 11pt;
+  margin: 10rpx;
+}
+.temp1-bg .img{
+  width: 94%;
+  height: 72%;
+  margin-left: 3%;
+}
+.temp2-bg .content{
+  display: flex;
+  flex-flow: row wrap;
+}
+.temp2-bg .main-core-item{
+  width: 33.3%;
+  display: flex;
+  padding: 0rpx 20rpx;
+  align-items: center;
+  justify-content: center;
+}
+.temp2-bg .img-bg{
+  width: 90px;
+  height: 127px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAB/CAYAAABvydWHAAAAGG5wT2wHAAAABwAAAAcAAAAHAAAAAAAAAP8AAACBIJh6AAAAVG5wVGMAAgIJIAAAACgAAAAAAAAHAAAABwAAAAcAAAAHMAAAAAAAAAoAAAAmAAAACQAAACoAAAABAAAAAQAAAAEAAAAB/////wAAAAEAAAABAAAAAQAAAAGyGhqUAAACFklEQVR42u3XUW7iMBRA0eeQJXT/K5wlELs/SWvcF4KrUUeanitZgUD7cXiYpMR5JfSdWnZyfYJbnqAXmNe4/fkMsz+W5LkeIdvwuA3I7Qq3RMSSnDPROW6LiJqci4ho6zDRPfC4MvDfPsk9cN1djscPH0q2Rx+wt25l4KA/UWtEbPs6qv0evZ5sF7f9tWPBvka+Dyatf74+mea1tfbH793rlVLekm2lxY467tH9RGuu/tv/8K1fkquOfqo1123YXj9sl4urDs2VXaEF6H8Ene3VmodOr8iWiztDTV54nN1FLxd/pHno01HXD+0pAg1aoEGDFmjQAg0atECDFmjQoAUatECDBi3QoAUaNGiBBi3QoEELNGiBBg1aoEELNGjQAg1aoEGDFmjQAg0atECDFmjQoAUatECDBi3QoAUaNGiBBi3QoEELNGiBBg1aoEELNGjQAg1aoEGDFmjQAg0atECDFmjQoAX6P4RueKZrV9CtO/ZL89CjXzub6ONNldt09WxIl5NPo4L+NnTNdgXQPwzd7yfHmzdu020DdrpH99O8RcSd23T3Dvthosuwloi47Wvt1m1/7VjH+3/zlUUdvv33bm0j+Dr8Qo5XG8dzyK9hb8lEf0DHi9Dj9IPOwcc9OmLfFrK7mjr8kxEY9Dl4etPXg5XkWJLn+jrZcXZHeBxHuPLCYxP99c6vXT1+BmZ6/86HEBER799TvPqLvKCxAAAAAElFTkSuQmCC');
+}
+.temp2-bg .board-img{
+  width: 60%;
+  height: 60%;
+}
+.temp2-bg .book-item{
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex: 1;
+}
+.book-item .txt{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  height: 140rpx;
+}
+.txt .name{
+  font-size: 25rpx;
+  font-weight: 550;
+  margin-left: 10rpx;
+  width: 150rpx;
+  display: -webkit-box;
+   word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+.txt .author{
+  font-size: 23rpx;
+  color: gray;
+  margin-left: 10rpx;
+   display: -webkit-box;
+   word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+.txt .price{
+  font-size: 22rpx;
+  color: red;
+  margin-left: 10rpx;
+}
+
+.load-bg{
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+}
+.tips image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.load-bg .img{
+  width: 60rpx;
+  height: 60rpx;
+}
+.load-bg .txt-loading{
+  font-size: 10pt;
+  margin-top: 10rpx;
+  color: gray;
+}
+
+.item {
+  display: flex;
+  padding: 20rpx 40rpx;
+  border-bottom: 1rpx solid #eee;
+  cursor: pointer;
+}
+
+.item .poster {
+  width: 70px;
+  height: 97px;
+  margin-right: 20rpx;
+}
+
+.item .meta {
+  flex: 1;
+}
+
+.item .meta .title,
+.item .meta .sub-title {
+  display: block;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.item .meta .title {
+  font-size: 26rpx;
+  margin-bottom: 15rpx;  
+  font-weight: 550;
+}
+
+.item .meta .sub-title {
+  font-size: 22rpx;
+  color: #c0c0c0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.item .meta .summary{
+  color: gray;
+  margin-bottom: 15rpx;    
+   display: -webkit-box;  
+   word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+.item .meta .artists {
+  font-size: 22rpx;
+  color: red;
+}
+
+.item .rating {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #f74c31;
+}

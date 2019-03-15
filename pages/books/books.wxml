@@ -1,0 +1,25 @@
+<scroll-view>
+  <view class='container'>
+    <view class="page__bd">
+      <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+          <label class="weui-search-bar__label" bindtap="goSearch">
+            <icon class="weui-icon-search" type="search" size="14"></icon>
+            <view class="weui-search-bar__text">搜索</view>
+          </label>
+        </view>
+      </view>
+    </view>
+    <view class="main-core">
+      <block wx:for="{{books}}" wx:key="id">
+        <navigator url="../billboard/billboard?category={{item.name}}" class="main-core-item">
+          <label class='book-item'>
+            <image class="board-img" src="{{item.img}}"></image>
+            <text class="core-item-name">{{item.name}}</text>
+          </label>
+        </navigator>
+      </block>
+    </view>
+    
+  </view>
+</scroll-view>

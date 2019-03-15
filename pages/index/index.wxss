@@ -1,0 +1,111 @@
+.sv{
+  flex: 1
+}
+
+.container{
+  padding: 0 0;
+  background: #EDEDED;
+}
+.weui-search-bar__form{
+  height: 24px;
+  margin-right: 20rpx;
+}
+
+.weui-search-bar__label{
+  line-height: 23px;
+}
+
+.weui-search-bar{
+  padding: 6px 10px;
+}
+
+.my-content-img{
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.swiper {
+  height: 300rpx;
+  width: 100%;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+.weui-cell__bd{
+  font-size: 9pt;
+  padding-top: 5rpx;
+  margin-left: 15rpx;
+}
+.hsv{
+  background: white;  
+  width: 100%;
+  margin-top: 20rpx;
+}
+.hsv .content{
+  height: 170rpx;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.main-core-item {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20rpx 20rpx;
+  width: 50%;
+}
+.book-item{
+  display: flex;
+  margin: 0 10rpx;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.core-item-name {
+  display: block;
+  flex: 1;
+  color: #5A5B5B;
+  text-align: center;
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  font-weight: 500;
+  font-family: "黑体";
+  }
+.book-item .color0{
+  background: #5E9AEF;
+}
+.book-item .color1{
+  background: #d4237a;
+}
+.book-item .color2{
+  background: #1afa29;
+}
+.book-item .color3{
+  background: #F4BB60;
+}
+.book-item .color4{
+  background: #9460F4;
+}
+.book-item .color5{
+  background: #60FFFA;
+}
+.book-item .bg-img{
+  border-radius: 30rpx;
+  padding: 15rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.board-img {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.tips{
+  padding:0;
+  margin-top: -10rpx;
+  color: #9F9F9F;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}

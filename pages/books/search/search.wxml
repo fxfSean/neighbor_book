@@ -1,0 +1,65 @@
+<import src="../../common/loading.wxml" />
+<import src="../../common/book-list.wxml" />
+
+<view class="page__bd">
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="12"></icon>
+        <input type="text" class="et_input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindconfirm='goSearch' />
+        <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-cells searchbar-result" wx:if="{{(inputVal.length > 0) && !loading && !(books.length>0)}}">
+    <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <icon class="icon" type="search" size="12"></icon>
+        <view>实时搜索文本</view>
+      </view>
+    </navigator>
+    <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <icon class="icon" type="search" size="12"></icon>
+        <view>实时搜索文本</view>
+      </view>
+    </navigator>
+    <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <icon class="icon" type="search" size="12"></icon>
+        <view>实时搜索文本</view>
+      </view>
+    </navigator>
+    <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <icon class="icon" type="search" size="12"></icon>
+        <view>实时搜索文本</view>
+      </view>
+    </navigator>
+  </view>
+  <template is="loading" wx:elif="{{loading && !(books.length>0)}}"/>
+  <template is="temp3" wx:elif="{{books.length>0}}" data="{{books,dropDown,hasMore}}"/>
+  <view class='default' wx:else>
+    <view class='history' wx:if="{{past.length}}">
+      <view class='top'>
+        <text class='keyword-title'>历史搜索</text>
+        <image class='top-delete' bindtap='delete' src='../../../images/delete.png'></image>
+      </view>
+      <view class='box'>
+        <block wx:for="{{past}}">
+          <text class='word' id='{{item}}' bindtap='keyword'>{{item}}</text>
+        </block>
+      </view>
+    </view>
+    <view class='hot'>
+      <text class='keyword-title'>热门搜索</text>
+      <view class='box'>
+        <block wx:for="{{hot}}">
+          <text class='word' id='{{item}}' bindtap='keyword'>{{item}}</text>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

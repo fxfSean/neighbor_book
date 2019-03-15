@@ -1,0 +1,69 @@
+<template name="temp1">
+  <navigator url=''>
+    <view class='temp1-bg'>
+      <text class='title'>{{item.title}}</text>
+      <image class='img' src='{{item.thumb}}'></image>
+    </view>
+  </navigator>
+</template>
+
+<template name="temp2">
+  <view class='temp2-bg'>
+    <text class='title'>{{item.title}}</text>
+    <view class='content'>
+      <block wx:for="{{item.item}}">
+        <view bindtap='navigateTo' class="main-core-item" id="{{index}}">
+          <label class='book-item'>
+            <view class='img-bg'>
+              <image class="board-img" src="{{item.thumb}}"></image>
+            </view>
+            <view class='txt'>
+              <text class="name">{{item.name}}</text>
+              <text class="author">{{item.author}}</text>
+              <text class="price">Ұ{{item.price}}</text>
+            </view>
+          </label>
+        </view>
+      </block>
+    </view>
+  </view>
+</template>
+
+<template name="temp3">
+  <scroll-view scroll-y="true" class="page-body" bindscrolltolower="loadMore">
+    <block wx:for="{{books}}">
+      <view bindtap='navigateTo' id='{{index}}'>
+        <view class="item">
+          <image class="poster" src="{{item.thumb}}"></image>
+          <view class="meta">
+            <text class="title">{{item.name}}</text>
+            <text class="sub-title">{{item.author}}</text>
+            <text class="sub-title summary">{{item.descriptions}}</text>
+            <view class="artists">
+              <text> ￥{{item.price}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class="tips">
+      <view wx:if="{{hasMore}}"><image src="../../../images/loading.gif" mode="aspectFill"/><text>玩了命的加载中...</text></view>
+      <view wx:else><text>没有更多内容了</text></view>
+    </view>
+  </scroll-view>
+  <!-- <loading hidden="{{!dropDown}}">加载中...</loading> -->
+</template>
+
+<template name="book-list">
+  <scroll-view scroll-y="true" class="page-body" bindscrolltolower="loadMore">
+  <template is="{{index%2 === 1 ? 'temp1':'temp2'}}" data="{{item}}" wx:for="{{response.data}}"></template>
+    <view class="tips">
+      <view wx:if="{{hasMore}}"><image src="../images/loading.gif" mode="aspectFill"/><text>玩了命的加载中...</text></view>
+      <view class='bottom' wx:else>
+        <view class='line'></view>
+        <text>我是有底线的</text>
+        <view class='line'></view>        
+      </view>
+    </view>
+  </scroll-view>
+</template>

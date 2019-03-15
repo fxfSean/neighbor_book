@@ -1,0 +1,49 @@
+<scroll-view class='sv'>
+  <view class='container'>
+    <view class="page__bd">
+      <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+          <label class="weui-search-bar__label" bindtap="goSearch">
+            <icon class="weui-icon-search" type="search" size="14"></icon>
+            <view class="weui-search-bar__text">搜索</view>
+          </label>
+        </view>
+        <image class='my-content-img' bindtap='scan' src='../../images/scan.png'></image>
+      </view>
+    </view>
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+      <block wx:for="{{info}}" wx:for-index="index">
+        <swiper-item>
+          <!--TODO edu item.banner-->
+          <image src="{{item.banner}}" class="slide-image" mode="aspectFill" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='weui-cells weui-cells_after-title'>
+      <navigator url="" class='weui-cell weui-cell_access' hover-class='weui-cell_active'>
+        <view class="weui-cell__hd">
+          <image style='margin-right:5px;vertical-align:middle;width:20px;height:20px;' src="../../images/hot.png"></image>
+        </view>
+        <view class="weui-cell__bd">40万电子书全场5折</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+
+      </navigator>
+    </view>
+    <scroll-view class='hsv' scroll-x='true'>
+      <view class='content'>
+        <block wx:for="{{books}}" wx:key="id">
+          <navigator url="{{item.url}}?name={{item.name}}" class="main-core-item">
+            <label class='book-item'>
+              <view class='bg-img color{{index}}'>
+                <image class="board-img" src="{{item.img}}"></image>
+              </view>
+              <text class="core-item-name">{{item.name}}</text>
+            </label>
+          </navigator>
+        </block>
+      </view>
+    </scroll-view>
+    <import src="../common/book-list.wxml" />
+    <template is="book-list" data="{{response}}"></template>
+  </view>
+</scroll-view>

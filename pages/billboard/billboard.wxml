@@ -1,0 +1,31 @@
+<view class='container'>
+  <view class='main-title' style="display:{{hidden === true ? 'none' :'flex'}};" bindtap='cliktotop'>畅销榜*全部</view>
+  <scroll-view class='main-sv-column' scroll-y='true' bindscroll='scroll' scroll-top="{{scrollTop}}">
+    <scroll-view class='hv-category-board' scroll-x='true' scroll-into-view="item-{{currentItemFirst}}">
+      <view class='content'>
+        <block class='hv' wx:for="{{categoryFirst}}">
+          <text class="{{currentFirst === index ? 'select':''}}" id="item-{{index}}" bindtap='selectBoard'>{{item}}</text>
+        </block>
+      </view>
+    </scroll-view>
+    <scroll-view class='hv-category-board' scroll-x='true' scroll-into-view="item-{{currentItemSecond}}">
+      <view class='content'>
+        <block wx:for="{{categorySecond}}">
+          <text class="{{currentSecond === index ? 'select':''}}" id="item-{{index}}" bindtap='selectBook'>{{item}}</text>
+        </block>
+      </view>
+    </scroll-view>
+    <view class='hv-category-board'>
+      <view class='content'>
+        <block wx:for="{{categoryThird}}">
+          <view class='content-time'>
+            <text class="{{currentThird === index ? 'select underline' : '' }}" id="{{index}}" bindtap='selectTime'>{{item}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+    <import src="../common/book-list.wxml" />
+    <template is="temp3" data="{{books}}" />
+  </scroll-view>
+  
+</view>

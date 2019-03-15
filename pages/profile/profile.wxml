@@ -1,0 +1,100 @@
+<!--pages/profile/profile.wxml-->
+<view class='container'>
+  <view class="usr_container">
+    <block wx:if="{{!isLogin}}">
+      <view class='navagator'  hover-class='navagator-active' bindtap='getPromission'>
+        <view class='unLogin'>
+          <view class='login-tips'>
+            <text class='txt-login'>登陆/注册</text>
+            <text class='txt-more'>登陆后可享受更多特权</text>
+          </view>
+        </view>
+        <image class='img-arrow' src='../../images/right-arrow.png'></image>
+      </view>
+    </block>
+    <view class='login' wx:else>
+      <image class="img" src="{{userInfo.avatarUrl}}"></image>
+      <view class='usr-title'>
+        <text class='usr_name'>{{userInfo.nickName}}</text>
+        <view class='usr-img-phone'>
+          <image class='img-phone' src='../../images/phone.png'></image>
+          <text class='usr_phone'>{{userInfo.phone}}15369302558</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='my-content' wx:if="{{!isLogin}}">
+    <view class='my-money'>
+      <image class='my-content-img' src='../../images/money.png'></image>
+      <text class='my-content-txt'>我的余额</text>
+    </view>
+    <view class='my-money'>
+      <image class='my-content-img' src='../../images/book.png'></image>
+      <text class='my-content-txt'>我的图书</text>
+    </view>
+    <view class='my-money'>
+      <image class='my-content-img' src='../../images/coin.png'></image>
+      <text class='my-content-txt'>我的书币</text>
+    </view>
+  </view>
+  <view class='my-content' wx:else>
+    <view class='my-money'>
+      <view class='num'>
+        <text class='txt-num'>0</text>
+        <text class='txt-unit'>元</text>
+      </view>
+      <text class='my-content-txt'>余额</text>
+    </view>
+    <view class='my-money'>
+      <view class='num'>
+        <text class='txt-num'>0</text>
+        <text class='txt-unit'>本</text>
+      </view>
+      <text class='my-content-txt'>图书</text>
+    </view>
+    <view class='my-money'>
+      <view class='num'>
+        <text class='txt-num'>0</text>
+        <text class='txt-unit'>个</text>
+      </view>
+      <text class='my-content-txt'>书币</text>
+    </view>
+  </view>
+
+  <view class='more-list' wx:if="{{!isLogin}}">
+    <view class='weui-cells weui-cells_after-title'>
+      <navigator url="/pages/profile/login" class='weui-cell weui-cell_access' hover-class='weui-cell_active'>
+        <view class="weui-cell__hd">
+          <image style='margin-right:5px;vertical-align:middle;width:15px;height:15px;' src="../../images/flower.png"></image>
+        </view>
+        <view class="weui-cell__bd">服务中心</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+
+      </navigator>
+    </view>
+  </view>
+  <view class="more-list" wx:else>
+    <view class='weui-cells weui-cells_after-title'>
+      <navigator url="/pages/profile/login" class='weui-cell weui-cell_access' hover-class='weui-cell_active'>
+        <view class="weui-cell__hd">
+          <image style='margin-right:5px;vertical-align:middle;width:15px;height:15px;' src="../../images/address.png"></image>
+        </view>
+        <view class="weui-cell__bd">收货地址</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+
+      </navigator>
+      <navigator url="/pages/profile/login" class='weui-cell weui-cell_access' hover-class='weui-cell_active'>
+        <view class="weui-cell__hd">
+          <image style='margin-right:5px;vertical-align:middle;width:15px;height:15px;' src="../../images/flower.png"></image>
+        </view>
+        <view class="weui-cell__bd">服务中心</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='logout' wx:if="{{isLogin}}" bindtap='logout'>
+    <text class='txt-logout'>退出登录</text>
+  </view>
+</view>

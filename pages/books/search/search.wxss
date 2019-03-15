@@ -1,0 +1,91 @@
+.page__bd {
+  height: 100%;
+  /* 这两句让scrollview起作用 */
+  display: flex;
+  flex-direction: column;
+}
+
+.weui-search-bar__form {
+  border-radius: 40rpx;
+  border: 0rpx;
+}
+
+.weui-search-bar__form input {
+}
+
+.et_input {
+  font-size: 9pt;
+  color: gray;
+}
+
+.weui-search-bar {
+  background: #3385ff;
+  border-top: 0;
+  border-bottom: 0rpx;
+  padding: 9px 12px;
+}
+
+.weui-search-bar__box {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.weui-icon-search_in-box {
+  top: 8px;
+}
+
+.weui-cell__bd {
+  font-size: 9pt;
+  display: flex;
+  flex-direction: row;
+}
+
+.weui-cell {
+  padding: 10px 10px;
+}
+
+.weui-cell:before {
+  left: 30px;
+  right: 10px;
+}
+
+.weui-cell__bd .icon {
+  margin-right: 18rpx;
+  margin-top: 8rpx;
+}
+
+.default text {
+  font-size: 9pt;
+  color: gray;
+}
+
+.keyword-title {
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  flex: 1;
+}
+
+.box {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.word {
+  padding: 5rpx 20rpx;
+  margin-left: 30rpx;
+  border: 1rpx solid gainsboro;
+  margin-top: 20rpx;
+  border-radius: 8rpx;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.top .top-delete {
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 30rpx;
+}
